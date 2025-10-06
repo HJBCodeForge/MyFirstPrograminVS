@@ -10,7 +10,7 @@
 
 //Console.ReadKey(); //Keeps the console window open
 
-//Creating variables, 2 steps: Declaration and Initialization
+//1. CREATING VARIABLES, 2 steps: Declaration and Initialization
 
 //Data types: int, double, char, string, bool
 //int x; //Declaration
@@ -26,7 +26,7 @@
 
 //const double gravity = 9.81; //Constant variable, cannot be changed
 
-//type casting = converting a variable from one data type to another
+//2. TYPE CASTING = converting a variable from one data type to another
 //              useful when we accept user input (string)
 
 //double a = 3.14;
@@ -39,14 +39,40 @@
 //Console.WriteLine(j.GetType());
 
 
-//User Input
+//3. USER INPUT
 
-Console.WriteLine("What's your name?");
-String name = Console.ReadLine();
+//Console.WriteLine("What's your name?");
+//String name = Console.ReadLine();
 
-Console.WriteLine("What is your age?");
-int age = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("What is your age?");
+//int age = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Hello " + name + " your age is " + age);
+//Console.WriteLine("Hello " + name + " your age is " + age);
+
+
+//4. MATH OPERATIONS
+
+int friends = 5;
+double familyRatio = 1.5;
+
+//friends = friends + 2; //Addition
+//friends += 2; //Shorthand addition
+//friends++; //Increment by 1
+
+//friends = friends - 1; //Subtraction
+//friends -= 1; //Shorthand subtraction
+//friends--; //Decrement by 1
+
+//friends = friends * 2; //Multiplication
+//friends *= 2; //Shorthand multiplication
+
+//friends = friends / 2; //Division
+//friends /= 2; //Shorthand division
+//familyRatio = familyRatio / 2; //Will show decimal 
+
+//friends = friends % 2; //Modulus (Remainder)
+
+//Console.WriteLine(friends);
+
 
 Console.ReadKey();
