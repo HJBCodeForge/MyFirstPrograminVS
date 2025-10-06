@@ -75,8 +75,8 @@
 //Console.WriteLine(friends);
 
 //5. MATH METHODS
-double x = 3.14;
-double y = 5;
+//double x = 3.14;
+//double y = 5;
 
 //double a = Math.Pow(x, 2); //Exponentiation, (x = base, 2 to the power of)
 //double b = Math.Sqrt(x); //Square root
@@ -109,8 +109,8 @@ double y = 5;
 //Console.WriteLine("The Hypotenuse of side C is: " + c);
 
 //8. String Methods
-String fullName = "John Doe";
-String phoneNumber = "123-456-7890";
+//String fullName = "John Doe";
+//String phoneNumber = "123-456-7890";
 
 //fullName = fullName.ToUpper(); //Converts to uppercase
 //fullName = fullName.ToLower(); //Converts to lowercase
@@ -119,5 +119,35 @@ String phoneNumber = "123-456-7890";
 //Console.WriteLine(fullName.Length); //Returns length of string
 //String firstName = fullName.Substring(0, 4); //Extracts part of a string    
 
+//9. If Statements = a basic form of decision making
+//Console.WriteLine("Please enter your age: ");
+//int age = Convert.ToInt32(Console.ReadLine());
 
-Console.ReadKey();
+//if (age >= 18)
+//{
+//    Console.WriteLine("You are an adult.");
+//}
+//else if (age < 0)
+//{
+//    Console.WriteLine("You haven't been born yet!");
+//}
+//else
+//{
+//    Console.WriteLine("You are a minor.");
+//}
+Console.WriteLine("Please enter your name: ");
+String name = Console.ReadLine();
+
+if (name == "")
+{
+    Console.WriteLine("You did not enter a name!");
+} else
+{
+    Console.WriteLine("Hello " + name);
+}
+
+
+
+
+
+    Console.ReadKey();
