@@ -97,9 +97,16 @@ double y = 5;
 //Console.WriteLine(num);
 
 
+//7. Hypotenuse Calculator
+//Console.WriteLine("Enter side A: ");
+//double a = Convert.ToDouble(Console.ReadLine());
 
+//Console.WriteLine("Enter side B: ");
+//double b = Convert.ToDouble(Console.ReadLine());
 
+//double c = Math.Sqrt((a * a) + (b * b));
 
+//Console.WriteLine("The Hypotenuse of side C is: " + c);
 
 
 Console.ReadKey();
