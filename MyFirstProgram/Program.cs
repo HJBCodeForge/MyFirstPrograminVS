@@ -52,8 +52,8 @@
 
 //4. MATH OPERATIONS
 
-int friends = 5;
-double familyRatio = 1.5;
+//int friends = 5;
+//double familyRatio = 1.5;
 
 //friends = friends + 2; //Addition
 //friends += 2; //Shorthand addition
@@ -73,6 +73,27 @@ double familyRatio = 1.5;
 //friends = friends % 2; //Modulus (Remainder)
 
 //Console.WriteLine(friends);
+
+//5. MATH METHODS
+double x = 3.14;
+double y = 5;
+
+//double a = Math.Pow(x, 2); //Exponentiation, (x = base, 2 to the power of)
+//double b = Math.Sqrt(x); //Square root
+//double c = Math.Abs(x); //Absolute value, how far from zero
+//double d = Math.Round(x); //Rounds to nearest whole number
+//double e = Math.Ceiling(x); //Rounds up to nearest whole number
+//double f = Math.Floor(x); //Rounds down to nearest whole number
+//double g = Math.Max(x, y); //Returns the larger of the two values
+//double h = Math.Min(x, y); //Returns the smaller of the two values
+
+//Console.WriteLine(h);
+
+
+
+
+
+
 
 
 Console.ReadKey();
