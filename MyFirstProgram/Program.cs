@@ -108,5 +108,16 @@ double y = 5;
 
 //Console.WriteLine("The Hypotenuse of side C is: " + c);
 
+//8. String Methods
+String fullName = "John Doe";
+String phoneNumber = "123-456-7890";
+
+//fullName = fullName.ToUpper(); //Converts to uppercase
+//fullName = fullName.ToLower(); //Converts to lowercase
+//phoneNumber = phoneNumber.Replace("-", "/"); //Replaces characters
+//String userName = fullName.Insert(0, "@"); //Inserts characters at index position
+//Console.WriteLine(fullName.Length); //Returns length of string
+//String firstName = fullName.Substring(0, 4); //Extracts part of a string    
+
 
 Console.ReadKey();
