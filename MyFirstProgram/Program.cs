@@ -135,19 +135,47 @@
 //{
 //    Console.WriteLine("You are a minor.");
 //}
-Console.WriteLine("Please enter your name: ");
-String name = Console.ReadLine();
+//Console.WriteLine("Please enter your name: ");
+//String name = Console.ReadLine();
 
-if (name == "")
-{
-    Console.WriteLine("You did not enter a name!");
-} else
-{
-    Console.WriteLine("Hello " + name);
-}
+//if (name == "")
+//{
+//    Console.WriteLine("You did not enter a name!");
+//} else
+//{
+//    Console.WriteLine("Hello " + name);
+//}
+
+//10. SWITCH STATEMENTS = an alternative to many "else if" statements
+//Console.WriteLine("What day is it today?");
+//String day = Console.ReadLine().ToLower();
+
+//switch (day) {
+//    case "monday":
+//        Console.WriteLine("It's Monday");
+//        break;
+//    case "tuesday":
+//        Console.WriteLine("It's Tuesday");
+//        break;
+//    case "wednesday":
+//        Console.WriteLine("It's Wednesday");
+//        break;
+//    case "thursday":
+//        Console.WriteLine("It's Thursday");
+//        break;
+//    case "friday":
+//        Console.WriteLine("It's Friday");
+//        break;
+//    case "saturday":
+//    case "sunday":
+//        Console.WriteLine("It's the weekend!");
+//        break;
+//    default:
+//        Console.WriteLine("That is not a day!");
+//        break;
+//}
 
 
 
 
-
-    Console.ReadKey();
+Console.ReadKey();
