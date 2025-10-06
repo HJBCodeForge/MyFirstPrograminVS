@@ -193,6 +193,103 @@
 //    Console.WriteLine("The temp is reasonable");
 //}
 
+//12. While Loops = repeat a block of code while a certain condition is true
+//String name = "";
+
+//while (name == "")
+//{
+//    Console.Write("Enter your name: ");
+//    name = Console.ReadLine();
+//};
+//Console.WriteLine("Hello " + name);
+
+//13. for loop = repeats some code a Finite amount of times
+/*
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine("Count: " + i);
+}
+*/
+/*for (int i = 10; i >= 0; i--)
+{
+    Console.WriteLine("New Years Count down: " + i);
+}
+Console.WriteLine("Happy New Year!");
+*/
+
+
+//14. Nested Loops = loops inside of other loops
+//                  Uses vary. Used a lot in sorting algorithms
+//Console.Write("How many rows? ");
+//int rows = Convert.ToInt32(Console.ReadLine());
+//Console.Write("How many columns? ");
+//int columns = Convert.ToInt32(Console.ReadLine());
+//Console.Write("What symbole or character? ");
+//String sym = Console.ReadLine();
+
+//for (int i = 0; i < rows; i++)
+//{
+//    for (int j = 0; j < columns; j++)
+//    {
+//        Console.Write(sym);
+//    }
+//    Console.WriteLine();
+//}
+
+//18. Number guessing game
+Random random = new Random();
+bool playAgain = true;
+int min = 1;
+int max = 100;
+int guess;
+int number;
+int guesses;
+String responce;
+
+while (playAgain)
+{
+    guess = 0;
+    guesses = 0;
+    responce = "";
+    number = random.Next(min, max + 1);
+
+    while (guess != number)
+    {
+        Console.WriteLine("Guess a number between" + min + " - " + max + "?");
+        guess = Convert.ToInt32(Console.ReadLine());
+        guesses++;
+
+        Console.WriteLine("Guess: " + guess);
+
+        if (guess > number)
+        {
+            Console.WriteLine("You guessed to much, go lower");
+        }
+        else if (guess < number)
+        {
+            Console.WriteLine("You guessed to small, go higher");
+        }
+        else
+        {
+            Console.WriteLine("That guess is correct! You guessed: " + guesses + " times.");
+        }
+    }
+    Console.WriteLine("Do you want to play again? (Y/N): ");
+    responce = Console.ReadLine().ToUpper();
+
+    if (responce == "Y")
+    {
+        playAgain = true;
+    }
+    else if (responce == "N")
+    {
+        playAgain = false;
+    }
+}
+Console.WriteLine("Thanks for playing... i guess");
+
+
+
 
 
 Console.ReadKey();
