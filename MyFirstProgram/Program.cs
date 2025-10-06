@@ -237,59 +237,112 @@ Console.WriteLine("Happy New Year!");
 //}
 
 //18. Number guessing game
+//Random random = new Random();
+//bool playAgain = true;
+//int min = 1;
+//int max = 100;
+//int guess;
+//int number;
+//int guesses;
+//String responce;
+
+//while (playAgain)
+//{
+//    guess = 0;
+//    guesses = 0;
+//    responce = "";
+//    number = random.Next(min, max + 1);
+
+//    while (guess != number)
+//    {
+//        Console.WriteLine("Guess a number between" + min + " - " + max + "?");
+//        guess = Convert.ToInt32(Console.ReadLine());
+//        guesses++;
+
+//        Console.WriteLine("Guess: " + guess);
+
+//        if (guess > number)
+//        {
+//            Console.WriteLine("You guessed to much, go lower");
+//        }
+//        else if (guess < number)
+//        {
+//            Console.WriteLine("You guessed to small, go higher");
+//        }
+//        else
+//        {
+//            Console.WriteLine("That guess is correct! You guessed: " + guesses + " times.");
+//        }
+//    }
+//    Console.WriteLine("Do you want to play again? (Y/N): ");
+//    responce = Console.ReadLine().ToUpper();
+
+//    if (responce == "Y")
+//    {
+//        playAgain = true;
+//    }
+//    else if (responce == "N")
+//    {
+//        playAgain = false;
+//    }
+//}
+//Console.WriteLine("Thanks for playing... i guess");
+
+//19.Rock Paper Scissors
+
 Random random = new Random();
-bool playAgain = true;
-int min = 1;
-int max = 100;
-int guess;
-int number;
-int guesses;
-String responce;
+bool playagain = true;
+String player;
+String computor;
 
-while (playAgain)
+while (playagain)
 {
-    guess = 0;
-    guesses = 0;
-    responce = "";
-    number = random.Next(min, max + 1);
+    player = "";
+    computor = "";
 
-    while (guess != number)
-    {
-        Console.WriteLine("Guess a number between" + min + " - " + max + "?");
-        guess = Convert.ToInt32(Console.ReadLine());
-        guesses++;
-
-        Console.WriteLine("Guess: " + guess);
-
-        if (guess > number)
-        {
-            Console.WriteLine("You guessed to much, go lower");
-        }
-        else if (guess < number)
-        {
-            Console.WriteLine("You guessed to small, go higher");
-        }
-        else
-        {
-            Console.WriteLine("That guess is correct! You guessed: " + guesses + " times.");
-        }
+    while (player != "ROCK" && player != "PAPER" && player != "SCISSORS") {
+        Console.Write("Choose Rock, Paper or Scissors: ");
+        player = Console.ReadLine().ToUpper();
     }
-    Console.WriteLine("Do you want to play again? (Y/N): ");
-    responce = Console.ReadLine().ToUpper();
 
-    if (responce == "Y")
+    switch (random.Next(1, 4))
     {
-        playAgain = true;
+        case 1:
+            computor = "ROCK";
+            break;
+        case 2:
+        computor = "PAPER";
+            break;
+        case 3:
+        computor = "SCISSORS";
+            break;
     }
-    else if (responce == "N")
+
+    Console.WriteLine("Your Choice is: " + player);
+    Console.WriteLine("The Computor chose: " + computor);
+
+    if ((player == "ROCK" && computor == "SCISSORS") || (player == "PAPER" && computor == "ROCK") || (player == "SCISSORS" && computor == "PAPER"))
     {
-        playAgain = false;
+        Console.WriteLine("You Win!");
+    } else if((computor == "ROCK" && player == "SCISSORS") || (computor == "PAPER" && player == "ROCK") || (computor == "SCISSORS" && player == "PAPER"))
+    {
+        Console.WriteLine("You Lose!");
+    } else
+    {
+        Console.WriteLine("It is a tie!");
+    }
+
+    Console.WriteLine("Do you want to play again? (Y/N)");
+    String play = Console.ReadLine().ToLower();
+    if (play == "y")
+    {
+        playagain = true;
+    }
+    else
+    {
+        playagain = false;
     }
 }
-Console.WriteLine("Thanks for playing... i guess");
-
-
-
 
 
 Console.ReadKey();
