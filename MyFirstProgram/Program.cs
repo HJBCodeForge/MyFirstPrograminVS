@@ -89,6 +89,12 @@ double y = 5;
 
 //Console.WriteLine(h);
 
+//6. Random Rumbers
+//Random random = new Random();
+//int num = random.Next(1, 7); //Returns a random integer, between 1 and 6
+//double num = random.NextDouble(); //Returns a random decimal between 0.0 and 1.0
+
+//Console.WriteLine(num);
 
 
 
