@@ -348,57 +348,74 @@ Console.WriteLine("Happy New Year!");
 
 //19. Calculator Program
 
-do {
-    double num1 = 0;
-    double num2 = 0;
-    double result = 0;
+//do {
+//    double num1 = 0;
+//    double num2 = 0;
+//    double result = 0;
 
-    Console.WriteLine("------------------");
-    Console.WriteLine("Calculator Program");
-    Console.WriteLine("------------------");
+//    Console.WriteLine("------------------");
+//    Console.WriteLine("Calculator Program");
+//    Console.WriteLine("------------------");
 
-    Console.Write("Enter number 1: ");
-    num1 = Convert.ToDouble(Console.ReadLine());
+//    Console.Write("Enter number 1: ");
+//    num1 = Convert.ToDouble(Console.ReadLine());
 
-    Console.Write("Enter number 2: ");
-    num2 = Convert.ToDouble(Console.ReadLine());
+//    Console.Write("Enter number 2: ");
+//    num2 = Convert.ToDouble(Console.ReadLine());
 
-    Console.WriteLine("Enter an option: ");
-    Console.WriteLine("\t+ : Add");
-    Console.WriteLine("\t- : Minus");
-    Console.WriteLine("\t* : Multiply");
-    Console.WriteLine("\t/ : Divide");
+//    Console.WriteLine("Enter an option: ");
+//    Console.WriteLine("\t+ : Add");
+//    Console.WriteLine("\t- : Minus");
+//    Console.WriteLine("\t* : Multiply");
+//    Console.WriteLine("\t/ : Divide");
 
-    Console.Write("Enter an option: ");
-    switch (Console.ReadLine())
-    {
-        case "+":
-            result = num1 + num2;
-            Console.WriteLine($"The Result is: {num1} + {num2} = " + result);
-            break;
+//    Console.Write("Enter an option: ");
+//    switch (Console.ReadLine())
+//    {
+//        case "+":
+//            result = num1 + num2;
+//            Console.WriteLine($"The Result is: {num1} + {num2} = " + result);
+//            break;
 
-        case "-":
-            result = num1 - num2;
-            Console.WriteLine($"The Result is: {num1} - {num2} = " + result);
-            break;
-        case "*":
-            result = num1 * num2;
-            Console.WriteLine($"The Result is: {num1} * {num2} = " + result);
-            break;
-        case "/":
-            result = num1 / num2;
-            Console.WriteLine($"The Result is: {num1} / {num2} = " + result);
-            break;
-        default:
-            Console.WriteLine("That was not a valid option.");
-            break;
-    }
-    Console.WriteLine("Would you like to continue? (Y)es, (N)o");
-} while (Console.ReadLine().ToUpper() == "Y");
+//        case "-":
+//            result = num1 - num2;
+//            Console.WriteLine($"The Result is: {num1} - {num2} = " + result);
+//            break;
+//        case "*":
+//            result = num1 * num2;
+//            Console.WriteLine($"The Result is: {num1} * {num2} = " + result);
+//            break;
+//        case "/":
+//            result = num1 / num2;
+//            Console.WriteLine($"The Result is: {num1} / {num2} = " + result);
+//            break;
+//        default:
+//            Console.WriteLine("That was not a valid option.");
+//            break;
+//    }
+//    Console.WriteLine("Would you like to continue? (Y)es, (N)o");
+//} while (Console.ReadLine().ToUpper() == "Y");
 
-Console.WriteLine("Bye");
+//Console.WriteLine("Bye");
 
+//20. Arrays = a variable that can store multiple value. fixed size.
+String[] cars2 = new String[3]; //Declare an array, specify size with [ ]
+String[] cars = { "BMW", "Mustang", "Corvette" }; //Add [ ] and { }, make it an array.
 
+cars[0] = "Tesla"; //You can change array items by accessing them with their index.
+Console.WriteLine(cars[0]); //to access array item, add [] and index.
+
+for(int i=0; i < cars.Length; i++) //.Length = property that returns the length of the array
+{
+    Console.WriteLine(cars[i]); //Prints all array items
+}
+
+//21. FOREACH LOOP = easy way to iterate through an array
+String[] fruits = { "Apple", "Banana", "Orange" };
+foreach (String fruit in fruits) //for each item in array, do something with it
+{
+    Console.WriteLine(fruit);
+}
 
 
 
