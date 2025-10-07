@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Console.Write("Hey!");
+﻿//Console.Write("Hey!");
 //Console.WriteLine("Hello!");
 
 ////This is a comment
@@ -435,27 +434,43 @@ Console.WriteLine("Happy New Year!");
 
 //23. Return = used to return a value back to the place where the method was called
 
-double x;
-double y;
-double result;
+//double x;
+//double y;
+//double result;
 
-Console.WriteLine("Enter number 1: ");
-x = Convert.ToDouble(Console.ReadLine());
+//Console.WriteLine("Enter number 1: ");
+//x = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine("Enter number 2: ");
-y = Convert.ToDouble(Console.ReadLine());
+//Console.WriteLine("Enter number 2: ");
+//y = Convert.ToDouble(Console.ReadLine());
 
-result = Multiply(x, y); //Call the method and store the return value in result
-Console.WriteLine("The result is: " + result);
-static double Multiply(double x, double y) //Specify return type instead of void
+//result = Multiply(x, y); //Call the method and store the return value in result
+//Console.WriteLine("The result is: " + result);
+//static double Multiply(double x, double y) //Specify return type instead of void
+//{
+//    return x * y;
+//}
+
+//24. method overloading = multiple methods with the same name but different parameters
+//                         name + parameters = signature
+//                         methods must have unique signatures
+internal class Program
 {
-    return x * y;
+    private static void Main(string[] args)
+    {
+        double total;
+        total = Multiply(2, 3, 4); //Calls first Add method
+
+        Console.WriteLine(total);
+        Console.ReadKey();
+
+    }
+    static double Multiply(double x, double y) //First Add method
+    {
+        return x * y;
+    }
+    static double Multiply(double x, double y, double z) //Second Add method
+    {
+        return x * y * z;
+    }
 }
-
-
-
-
-
-
-
-Console.ReadKey();
