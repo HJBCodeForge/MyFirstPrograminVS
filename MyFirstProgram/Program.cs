@@ -290,59 +290,119 @@ Console.WriteLine("Happy New Year!");
 
 //19.Rock Paper Scissors
 
-Random random = new Random();
-bool playagain = true;
-String player;
-String computor;
+//Random random = new Random();
+//bool playagain = true;
+//String player;
+//String computor;
 
-while (playagain)
-{
-    player = "";
-    computor = "";
+//while (playagain)
+//{
+//    player = "";
+//    computor = "";
 
-    while (player != "ROCK" && player != "PAPER" && player != "SCISSORS") {
-        Console.Write("Choose Rock, Paper or Scissors: ");
-        player = Console.ReadLine().ToUpper();
-    }
+//    while (player != "ROCK" && player != "PAPER" && player != "SCISSORS") {
+//        Console.Write("Choose Rock, Paper or Scissors: ");
+//        player = Console.ReadLine().ToUpper();
+//    }
 
-    switch (random.Next(1, 4))
+//    switch (random.Next(1, 4))
+//    {
+//        case 1:
+//            computor = "ROCK";
+//            break;
+//        case 2:
+//        computor = "PAPER";
+//            break;
+//        case 3:
+//        computor = "SCISSORS";
+//            break;
+//    }
+
+//    Console.WriteLine("Your Choice is: " + player);
+//    Console.WriteLine("The Computor chose: " + computor);
+
+//    if ((player == "ROCK" && computor == "SCISSORS") || (player == "PAPER" && computor == "ROCK") || (player == "SCISSORS" && computor == "PAPER"))
+//    {
+//        Console.WriteLine("You Win!");
+//    } else if((computor == "ROCK" && player == "SCISSORS") || (computor == "PAPER" && player == "ROCK") || (computor == "SCISSORS" && player == "PAPER"))
+//    {
+//        Console.WriteLine("You Lose!");
+//    } else
+//    {
+//        Console.WriteLine("It is a tie!");
+//    }
+
+//    Console.WriteLine("Do you want to play again? (Y/N)");
+//    String play = Console.ReadLine().ToLower();
+//    if (play == "y")
+//    {
+//        playagain = true;
+//    }
+//    else
+//    {
+//        playagain = false;
+//    }
+//}
+
+//Console.WriteLine("Thank for playing");
+
+//19. Calculator Program
+
+do {
+    double num1 = 0;
+    double num2 = 0;
+    double result = 0;
+
+    Console.WriteLine("------------------");
+    Console.WriteLine("Calculator Program");
+    Console.WriteLine("------------------");
+
+    Console.Write("Enter number 1: ");
+    num1 = Convert.ToDouble(Console.ReadLine());
+
+    Console.Write("Enter number 2: ");
+    num2 = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine("Enter an option: ");
+    Console.WriteLine("\t+ : Add");
+    Console.WriteLine("\t- : Minus");
+    Console.WriteLine("\t* : Multiply");
+    Console.WriteLine("\t/ : Divide");
+
+    Console.Write("Enter an option: ");
+    switch (Console.ReadLine())
     {
-        case 1:
-            computor = "ROCK";
+        case "+":
+            result = num1 + num2;
+            Console.WriteLine($"The Result is: {num1} + {num2} = " + result);
             break;
-        case 2:
-        computor = "PAPER";
+
+        case "-":
+            result = num1 - num2;
+            Console.WriteLine($"The Result is: {num1} - {num2} = " + result);
             break;
-        case 3:
-        computor = "SCISSORS";
+        case "*":
+            result = num1 * num2;
+            Console.WriteLine($"The Result is: {num1} * {num2} = " + result);
+            break;
+        case "/":
+            result = num1 / num2;
+            Console.WriteLine($"The Result is: {num1} / {num2} = " + result);
+            break;
+        default:
+            Console.WriteLine("That was not a valid option.");
             break;
     }
+    Console.WriteLine("Would you like to continue? (Y)es, (N)o");
+} while (Console.ReadLine().ToUpper() == "Y");
 
-    Console.WriteLine("Your Choice is: " + player);
-    Console.WriteLine("The Computor chose: " + computor);
+Console.WriteLine("Bye");
 
-    if ((player == "ROCK" && computor == "SCISSORS") || (player == "PAPER" && computor == "ROCK") || (player == "SCISSORS" && computor == "PAPER"))
-    {
-        Console.WriteLine("You Win!");
-    } else if((computor == "ROCK" && player == "SCISSORS") || (computor == "PAPER" && player == "ROCK") || (computor == "SCISSORS" && player == "PAPER"))
-    {
-        Console.WriteLine("You Lose!");
-    } else
-    {
-        Console.WriteLine("It is a tie!");
-    }
 
-    Console.WriteLine("Do you want to play again? (Y/N)");
-    String play = Console.ReadLine().ToLower();
-    if (play == "y")
-    {
-        playagain = true;
-    }
-    else
-    {
-        playagain = false;
-    }
-}
+
+
+
+
 
 
 Console.ReadKey();
