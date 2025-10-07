@@ -419,19 +419,39 @@ Console.WriteLine("Happy New Year!");
 
 //22. METHODS = a block of code that performs a certain task
 //          benefit: Let's us reuse code witout writing it multiple times
-String name = "John";
-int age = 21;
+//String name = "John";
+//int age = 21;
 
-signHappyBirthday(name, age); //Call the method, pass argument (name)
+//signHappyBirthday(name, age); //Call the method, pass argument (name)
 
-static void signHappyBirthday(String name, int age) //Method declaration, specify parameter (name)
-{ 
-    Console.WriteLine("Happy Birthday to you");
-    Console.WriteLine("Happy Birthday to you");
-    Console.WriteLine("Happy Birthday dear " + name);
-    Console.WriteLine("Happy Birthday to you");
-    Console.WriteLine("You are " + age + " years old!");
+//static void signHappyBirthday(String name, int age) //Method declaration, specify parameter (name)
+//{ 
+//    Console.WriteLine("Happy Birthday to you");
+//    Console.WriteLine("Happy Birthday to you");
+//    Console.WriteLine("Happy Birthday dear " + name);
+//    Console.WriteLine("Happy Birthday to you");
+//    Console.WriteLine("You are " + age + " years old!");
+//}
+
+//23. Return = used to return a value back to the place where the method was called
+
+double x;
+double y;
+double result;
+
+Console.WriteLine("Enter number 1: ");
+x = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Enter number 2: ");
+y = Convert.ToDouble(Console.ReadLine());
+
+result = Multiply(x, y); //Call the method and store the return value in result
+Console.WriteLine("The result is: " + result);
+static double Multiply(double x, double y) //Specify return type instead of void
+{
+    return x * y;
 }
+
 
 
 
