@@ -399,22 +399,38 @@ Console.WriteLine("Happy New Year!");
 //Console.WriteLine("Bye");
 
 //20. Arrays = a variable that can store multiple value. fixed size.
-String[] cars2 = new String[3]; //Declare an array, specify size with [ ]
-String[] cars = { "BMW", "Mustang", "Corvette" }; //Add [ ] and { }, make it an array.
+//String[] cars2 = new String[3]; //Declare an array, specify size with [ ]
+//String[] cars = { "BMW", "Mustang", "Corvette" }; //Add [ ] and { }, make it an array.
 
-cars[0] = "Tesla"; //You can change array items by accessing them with their index.
-Console.WriteLine(cars[0]); //to access array item, add [] and index.
+//cars[0] = "Tesla"; //You can change array items by accessing them with their index.
+//Console.WriteLine(cars[0]); //to access array item, add [] and index.
 
-for(int i=0; i < cars.Length; i++) //.Length = property that returns the length of the array
-{
-    Console.WriteLine(cars[i]); //Prints all array items
-}
+//for(int i=0; i < cars.Length; i++) //.Length = property that returns the length of the array
+//{
+//    Console.WriteLine(cars[i]); //Prints all array items
+//}
 
-//21. FOREACH LOOP = easy way to iterate through an array
-String[] fruits = { "Apple", "Banana", "Orange" };
-foreach (String fruit in fruits) //for each item in array, do something with it
-{
-    Console.WriteLine(fruit);
+////21. FOREACH LOOP = easy way to iterate through an array
+//String[] fruits = { "Apple", "Banana", "Orange" };
+//foreach (String fruit in fruits) //for each item in array, do something with it
+//{
+//    Console.WriteLine(fruit);
+//}
+
+//22. METHODS = a block of code that performs a certain task
+//          benefit: Let's us reuse code witout writing it multiple times
+String name = "John";
+int age = 21;
+
+signHappyBirthday(name, age); //Call the method, pass argument (name)
+
+static void signHappyBirthday(String name, int age) //Method declaration, specify parameter (name)
+{ 
+    Console.WriteLine("Happy Birthday to you");
+    Console.WriteLine("Happy Birthday to you");
+    Console.WriteLine("Happy Birthday dear " + name);
+    Console.WriteLine("Happy Birthday to you");
+    Console.WriteLine("You are " + age + " years old!");
 }
 
 
