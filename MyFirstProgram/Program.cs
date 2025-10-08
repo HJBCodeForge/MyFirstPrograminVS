@@ -638,6 +638,21 @@
         //    Console.ReadKey();
         //}
 
+        //33. Static modifier = modifier that makes a member belong to the class itself instead of to a specific object
+        static void Main(String[] args)
+        {
+            Car car1 = new Car("Ford", "Mustang", 2024, "Red");
+            Car car2 = new Car("Chevy", "Corvette", 2023, "Blue");
+            Car car3 = new Car("Dodge", "Challenger", 2022, "Black");
+
+            Console.WriteLine(Car.numberOfCars);
+            Car.StartRace();
+
+            //car1.Drive();
+            //car2.Drive();
+            Console.ReadKey();
+        }
+
     }
     //class Human
     //{
@@ -659,23 +674,29 @@
     //        Console.WriteLine(name + " is sleeping");
     //    }
     //}
-    //class Car
-    //{
-    //    String make;
-    //    String model;
-    //    int year;
-    //    String color;
+    class Car
+    {
+        String make;
+        String model;
+        int year;
+        String color;
+        public static int numberOfCars; //Static variable to keep track of number of cars
+        public Car(String make, String model, int year, String color)
+        {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.color = color;
+            numberOfCars++; //Increment number of cars when a new car is created
+        }
+        public static void StartRace() //Static method, can be called without an object
+        {
+            Console.WriteLine("The race has begun!");
+        }
 
-    //    public Car(String make, String model, int year, String color)
-    //    {
-    //        this.make = make;
-    //        this.model = model;
-    //        this.year = year;
-    //        this.color = color;
-    //    }
     //    public void Drive()
     //    {
     //        Console.WriteLine($"I am driving a {year} {make} {model} with a color of {color}");
     //    }
-    //}
+    }
 }
