@@ -589,17 +589,48 @@
         //30. Classes = a class is a blueprint for an object
         //              A bundle of related code
 
+        //static void Main(string[] args)
+        //{
+        //    Math.Round(3.14);
+        //    Math.Abs(-3.14);
+        //    Math.Pow(2, 3);
+
+        //    Messages.Hello(); //Calling method from Messages class
+        //    Messages.Waiting();
+        //    Messages.Bye();
+
+        //    Console.ReadKey();
+        //}
+
+        //31. Objects = an instance of a class
+        //              A class can be used as a blueprint to create objects (OOP)
+        //              Objects can have fields and methods (characteristics and behaviors)
+
         static void Main(string[] args)
         {
-            Math.Round(3.14);
-            Math.Abs(-3.14);
-            Math.Pow(2, 3);
+            Human human1 = new Human();
+            human1.name = "Rick";
+            human1.age = 65;
 
-            Messages.Hello(); //Calling method from Messages class
-            Messages.Waiting();
-            Messages.Bye();
+            human1.Eat();
+            human1.Sleep();
 
             Console.ReadKey();
+        }
+        
+    }
+    class Human
+    {
+        public String name;
+        public int age;
+
+        public void Eat()
+        {
+            Console.WriteLine(name + " is eating");
+        }
+        public void Sleep()
+        {
+            Console.WriteLine(name + " is sleeping");
         }
     }
 }
