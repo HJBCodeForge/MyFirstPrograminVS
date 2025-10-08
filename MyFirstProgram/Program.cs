@@ -606,31 +606,76 @@
         //              A class can be used as a blueprint to create objects (OOP)
         //              Objects can have fields and methods (characteristics and behaviors)
 
-        static void Main(string[] args)
-        {
-            Human human1 = new Human();
-            human1.name = "Rick";
-            human1.age = 65;
+        //static void Main(string[] args)
+        //{
+        //    Human human1 = new Human();
+        //    human1.name = "Rick";
+        //    human1.age = 65;
 
-            human1.Eat();
-            human1.Sleep();
+        //    human1.Eat();
+        //    human1.Sleep();
 
-            Console.ReadKey();
-        }
-        
+        //    Console.ReadKey();
+        //}
+
+        //32. Constructors = special method in a class
+        //                   Same name as the class
+        //                   Can be used to assign values to fields when an object is created
+
+        //static void Main(string[] args)
+        //{
+        //    Human human1 = new Human("Rick", 65);
+        //    Human human2 = new Human("Morty", 14);
+        //    human1.Eat();
+        //    human2.Sleep();
+
+        //    Car car1 = new Car("Ford", "Mustang", 2024, "Red");
+        //    Car car2 = new Car("Chevy", "Corvette", 2023, "Blue");
+
+        //    car1.Drive();
+        //    car2.Drive();
+
+        //    Console.ReadKey();
+        //}
+
     }
-    class Human
-    {
-        public String name;
-        public int age;
+    //class Human
+    //{
+    //    public String name;
+    //    public int age;
 
-        public void Eat()
-        {
-            Console.WriteLine(name + " is eating");
-        }
-        public void Sleep()
-        {
-            Console.WriteLine(name + " is sleeping");
-        }
-    }
+    //    public Human(String name, int age) //Constructor, called when object is created
+    //    {
+    //        this.name = name;
+    //        this.age = age;
+    //    }
+
+    //    public void Eat()
+    //    {
+    //        Console.WriteLine(name + " is eating");
+    //    }
+    //    public void Sleep()
+    //    {
+    //        Console.WriteLine(name + " is sleeping");
+    //    }
+    //}
+    //class Car
+    //{
+    //    String make;
+    //    String model;
+    //    int year;
+    //    String color;
+
+    //    public Car(String make, String model, int year, String color)
+    //    {
+    //        this.make = make;
+    //        this.model = model;
+    //        this.year = year;
+    //        this.color = color;
+    //    }
+    //    public void Drive()
+    //    {
+    //        Console.WriteLine($"I am driving a {year} {make} {model} with a color of {color}");
+    //    }
+    //}
 }
