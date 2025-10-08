@@ -864,4 +864,42 @@
     //        this.model = model;
     //    }
     //}
+
+    //38. Pass and object as an argument = passing an object to a method as a parameter
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Car car1 = new Car("Mustang", "red");
+
+            Car car2 = Copy(car1); //Create a copy of car1 and store it in car2
+
+            //ChangeColor(car1, "Silver");
+
+            Console.WriteLine(car2.color + " " + car2.model);
+
+            Console.ReadKey();
+        }
+        //public static void ChangeColor(Car car, String color)
+        //{
+        //    car.color = color;
+        //}
+
+        public static Car Copy(Car car)
+        {
+            return new Car(car.model, car.color);
+        }
+    }
+    class Car
+    {
+        public String model;
+        public String color;
+
+        public Car(String model, String color)
+        {
+            this.model = model;
+            this.color = color;
+        }
+    }
 }
