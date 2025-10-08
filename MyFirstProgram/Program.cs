@@ -562,26 +562,42 @@
         //    Console.ReadKey();
 
         //29. multidimensional arrays = an array of arrays, i.e. a grid
+        //static void Main(string[] args)
+        //{
+        //    String[,] fruits = { {"Apple", "Banana", "Orange" },
+        //                         {"Pineapple", "Mango", "Papaya" },
+        //                         {"Kiwi", "Peach", "Grapes" } };
+        //    fruits[1, 2] = "Watermelon"; //Changing item in 2D array
+
+        //    //foreach (String fruit in fruits) {
+        //    //    Console.WriteLine(fruit); //Prints all items in 2D array
+        //    //}
+        //    //Displaying as grid
+        //    for (int i = 0; i < fruits.GetLength(0); i++) //GetLength(0) gets number of rows
+        //    {
+        //        for (int j = 0; j < fruits.GetLength(1); j++) //GetLength(1) gets number of columns
+        //        {
+        //            Console.Write(fruits[i, j] + "\t"); //\t adds a tab space between items
+        //        }
+        //        Console.WriteLine(); //Adds a new line after each row
+        //    }
+
+
+        //    Console.ReadKey();
+        //}
+
+        //30. Classes = a class is a blueprint for an object
+        //              A bundle of related code
+
         static void Main(string[] args)
         {
-            String[,] fruits = { {"Apple", "Banana", "Orange" },
-                                 {"Pineapple", "Mango", "Papaya" },
-                                 {"Kiwi", "Peach", "Grapes" } };
-            fruits[1, 2] = "Watermelon"; //Changing item in 2D array
-            
-            //foreach (String fruit in fruits) {
-            //    Console.WriteLine(fruit); //Prints all items in 2D array
-            //}
-            //Displaying as grid
-            for (int i = 0; i < fruits.GetLength(0); i++) //GetLength(0) gets number of rows
-            {
-                for (int j = 0; j < fruits.GetLength(1); j++) //GetLength(1) gets number of columns
-                {
-                    Console.Write(fruits[i, j] + "\t"); //\t adds a tab space between items
-                }
-                Console.WriteLine(); //Adds a new line after each row
-            }
+            Math.Round(3.14);
+            Math.Abs(-3.14);
+            Math.Pow(2, 3);
 
+            Messages.Hello(); //Calling method from Messages class
+            Messages.Waiting();
+            Messages.Bye();
 
             Console.ReadKey();
         }
