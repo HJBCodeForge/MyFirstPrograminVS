@@ -746,46 +746,86 @@
     //}
 
     //35. inheritance = when a class (child) inherits the fields and methods of another class (parent)
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Car car = new Car();
+    //        Bicycle bike = new Bicycle();
+    //        Boat boat = new Boat();
+
+    //        Console.WriteLine(car.speed);
+    //        Console.WriteLine(car.wheels);
+    //        car.go();
+
+    //        Console.WriteLine(boat.speed);
+    //        Console.WriteLine(boat.wheels);
+    //        boat.go();
+
+    //        Console.ReadKey();
+    //    }
+    //}
+    //class Vehicle
+    //{
+
+    //    public int speed = 0;
+
+    //    public void go()
+    //    {
+    //        Console.WriteLine("Go go!");
+    //    }
+    //}
+    //class  Car : Vehicle
+    //{
+    //    public int wheels = 4;
+    //}
+    //class Bicycle : Vehicle
+    //{
+    //    public int wheels = 2;
+    //}
+    //class Boat : Vehicle
+    //{
+    //    public int wheels = 0;
+    //}
+
+    //36. Abstract classes = modifier that indicates missing components or incomplete implementation
     class Program
     {
-        static void Main(string[] args)
+        public void Main(String[] args)
         {
             Car car = new Car();
-            Bicycle bike = new Bicycle();
+            Bicycle bycycle = new Bicycle();
             Boat boat = new Boat();
+            Vehicle vehicle = new Vehicle(); //Cannot create object from abstract class
 
-            Console.WriteLine(car.speed);
-            Console.WriteLine(car.wheels);
-            car.go();
-
-            Console.WriteLine(boat.speed);
-            Console.WriteLine(boat.wheels);
-            boat.go();
 
             Console.ReadKey();
         }
     }
-    class Vehicle
-    {
 
+    abstract class Vehicle //Cannot create objects from abstract class, add abstract before class
+    {
         public int speed = 0;
 
         public void go()
         {
-            Console.WriteLine("Go go!");
+            Console.WriteLine("This vihicle is moving!");
         }
     }
-    class  Car : Vehicle
+    class Car : Vehicle
     {
         public int wheels = 4;
+        int maxSpeed = 500;
     }
     class Bicycle : Vehicle
     {
         public int wheels = 2;
+        int maxSpeed = 50;
     }
     class Boat : Vehicle
     {
         public int wheels = 0;
+        int maxSpeed = 100;
     }
 
 
