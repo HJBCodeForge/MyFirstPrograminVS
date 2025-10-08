@@ -789,44 +789,79 @@
     //}
 
     //36. Abstract classes = modifier that indicates missing components or incomplete implementation
-    class Program
-    {
-        public void Main(String[] args)
-        {
-            Car car = new Car();
-            Bicycle bycycle = new Bicycle();
-            Boat boat = new Boat();
-            Vehicle vehicle = new Vehicle(); //Cannot create object from abstract class
+    //class Program
+    //{
+    //    public void Main(String[] args)
+    //    {
+    //        Car car = new Car();
+    //        Bicycle bycycle = new Bicycle();
+    //        Boat boat = new Boat();
+    //        Vehicle vehicle = new Vehicle(); //Cannot create object from abstract class
 
 
-            Console.ReadKey();
-        }
-    }
+    //        Console.ReadKey();
+    //    }
+    //}
 
-    abstract class Vehicle //Cannot create objects from abstract class, add abstract before class
-    {
-        public int speed = 0;
+    //abstract class Vehicle //Cannot create objects from abstract class, add abstract before class
+    //{
+    //    public int speed = 0;
 
-        public void go()
-        {
-            Console.WriteLine("This vihicle is moving!");
-        }
-    }
-    class Car : Vehicle
-    {
-        public int wheels = 4;
-        int maxSpeed = 500;
-    }
-    class Bicycle : Vehicle
-    {
-        public int wheels = 2;
-        int maxSpeed = 50;
-    }
-    class Boat : Vehicle
-    {
-        public int wheels = 0;
-        int maxSpeed = 100;
-    }
+    //    public void go()
+    //    {
+    //        Console.WriteLine("This vihicle is moving!");
+    //    }
+    //}
+    //class Car : Vehicle
+    //{
+    //    public int wheels = 4;
+    //    int maxSpeed = 500;
+    //}
+    //class Bicycle : Vehicle
+    //{
+    //    public int wheels = 2;
+    //    int maxSpeed = 50;
+    //}
+    //class Boat : Vehicle
+    //{
+    //    public int wheels = 0;
+    //    int maxSpeed = 100;
+    //}
 
+    //37. array of objects = an array that can store multiple objects of the same class
 
+    //class Program
+    //{
+    //    static void Main(String[] args)
+    //    {
+    //        //Car[] garage = new Car[3]; //Array of Car objects, size 3
+
+    //        //Car car1 = new Car("Mustang");
+    //        //Car car2 = new Car("Corvette");
+    //        //Car car3 = new Car("Challenger");
+
+    //        //garage[0] = car1; //Add car1 to array at index 0
+    //        //garage[1] = car2; //Add car2 to array at index 1
+    //        //garage[2] = car3; //Add car3 to array at index 2
+
+    //        Car[] garage = {new Car("Mustang"), new Car("Corvette"), new Car("Challenger")}; //Array of Car objects, no size limit
+    //                                                                                         //Fewer lines of code than previous method
+
+    //        foreach (Car car in garage)
+    //        {
+    //            Console.WriteLine(car.model);
+    //        }
+
+    //        Console.ReadKey();
+    //    }
+    //}
+    //class Car
+    //{
+    //    public String model;
+
+    //    public Car(String model)
+    //    {
+    //        this.model = model;
+    //    }
+    //}
 }
