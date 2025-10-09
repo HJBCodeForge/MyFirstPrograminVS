@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 namespace MyFirstProgram
 {
     //class Program
@@ -1124,43 +1125,87 @@ namespace MyFirstProgram
 
     //44. List of object from custom class
 
+    //class Program
+    //{
+    //    static void Main(String[] args)
+    //    {
+    //        List<Player> players = new List<Player>();
+
+    //        //Player player1 = new Player("Chad");
+    //        //Player player2 = new Player("Peet");
+    //        //Player player3 = new Player("Sam");
+
+    //        //Adding new players, less code
+
+    //        players.Add(new Player("Chad"));
+    //        players.Add(new Player("Peet"));
+    //        players.Add(new Player("Sam"));
+
+    //        foreach (Player player in players)
+    //        {
+    //            //Console.WriteLine(player.username); //normal way
+    //            Console.WriteLine(player); //override ToString()
+    //        }
+
+
+    //        Console.ReadKey();
+    //    }
+    //}
+    //class Player
+    //{
+    //    public String username;
+
+    //    public Player(String username)
+    //    {
+    //        this.username = username;
+    //    }
+    //    public override String ToString() 
+    //    { 
+    //        return username;
+    //    }
+    //}
+
+    //45. getters & setters = add security to fields by encapsulation
+    //                        They're accessors found within properties
+    // properties = combine aspects of both fields and methods (share name with a field)
+    // get accessor = used to return a property value
+    // get accessor = used to asign anew value
+    // value keyword = defines the value being assigned by the set (parameter)
+
     class Program
     {
-        static void Main(String[] args)
+        static void Main(string[] args)
         {
-            List<Player> players = new List<Player>();
+            Car car = new Car(400);
 
-            //Player player1 = new Player("Chad");
-            //Player player2 = new Player("Peet");
-            //Player player3 = new Player("Sam");
+            car.Speed = 1000000;
 
-            //Adding new players, less code
-
-            players.Add(new Player("Chad"));
-            players.Add(new Player("Peet"));
-            players.Add(new Player("Sam"));
-
-            foreach (Player player in players)
-            {
-                //Console.WriteLine(player.username); //normal way
-                Console.WriteLine(player); //override ToString()
-            }
-
+            Console.WriteLine(car.Speed);
 
             Console.ReadKey();
         }
     }
-    class Player
+    class Car
     {
-        public String username;
+        public int speed;
 
-        public Player(String username)
+        public Car(int speed)
         {
-            this.username = username;
+            Speed = speed;
         }
-        public override String ToString() 
-        { 
-            return username;
+        public int Speed
+        {
+            get { return speed; } //read
+            set                   //writable
+            {
+                if (value > 500)
+                {
+                    speed = 500;
+                } else
+                {
+                    speed = value;
+                }
+            }
         }
     }
 
