@@ -1086,39 +1086,81 @@ namespace MyFirstProgram
     //           Similar to array, but can dynamically increase/decrease in size
     //           using System.Collections.Generic;
 
-    class Public
+    //class Public
+    //{
+    //    static void Main(String[] args)
+    //    {
+    //        List<string> food = new List<String>();
+
+    //        food.Add("fries");
+    //        food.Add("pizza");      //Not limit to items that can be added.
+    //        food.Add("hamburger");
+    //        food.Add("hotdog");
+    //        food.Add("fries");
+
+    //        Console.WriteLine("Access an item in the array: " + food[0]);
+
+    //        //Some usefull List methods
+
+    //        //food.Remove("fries");
+    //        //food.Insert(0,"sushi");
+    //        //Console.WriteLine(food.Count);
+    //        //Console.WriteLine(food.IndexOf("pizza"));
+    //        //Console.WriteLine(food.LastIndexOf("fries"));
+    //        //Console.WriteLine(food.Contains("pizza"));
+    //        //food.Sort();
+    //        //food.Reverse();
+    //        //food.Clear();
+    //        //String[] foodArray = food.ToArray();
+
+    //        foreach (String item in food)
+    //        {
+    //            Console.WriteLine(item);
+    //        }
+
+    //        Console.ReadKey();
+    //    }
+    //}
+
+    //44. List of object from custom class
+
+    class Program
     {
         static void Main(String[] args)
         {
-            List<string> food = new List<String>();
+            List<Player> players = new List<Player>();
 
-            food.Add("fries");
-            food.Add("pizza");      //Not limit to items that can be added.
-            food.Add("hamburger");
-            food.Add("hotdog");
-            food.Add("fries");
+            //Player player1 = new Player("Chad");
+            //Player player2 = new Player("Peet");
+            //Player player3 = new Player("Sam");
 
-            Console.WriteLine("Access an item in the array: " + food[0]);
+            //Adding new players, less code
 
-            //Some usefull List methods
+            players.Add(new Player("Chad"));
+            players.Add(new Player("Peet"));
+            players.Add(new Player("Sam"));
 
-            //food.Remove("fries");
-            //food.Insert(0,"sushi");
-            //Console.WriteLine(food.Count);
-            //Console.WriteLine(food.IndexOf("pizza"));
-            //Console.WriteLine(food.LastIndexOf("fries"));
-            //Console.WriteLine(food.Contains("pizza"));
-            //food.Sort();
-            //food.Reverse();
-            //food.Clear();
-            //String[] foodArray = food.ToArray();
-
-            foreach (String item in food)
+            foreach (Player player in players)
             {
-                Console.WriteLine(item);
+                //Console.WriteLine(player.username); //normal way
+                Console.WriteLine(player); //override ToString()
             }
 
+
             Console.ReadKey();
+        }
+    }
+    class Player
+    {
+        public String username;
+
+        public Player(String username)
+        {
+            this.username = username;
+        }
+        public override String ToString() 
+        { 
+            return username;
         }
     }
 
