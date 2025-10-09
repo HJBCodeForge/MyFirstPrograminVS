@@ -867,39 +867,77 @@
 
     //38. Pass and object as an argument = passing an object to a method as a parameter
 
-    class Program
-    {
-        static void Main(String[] args)
-        {
-            Car car1 = new Car("Mustang", "red");
+    //class Program
+    //{
+    //    static void Main(String[] args)
+    //    {
+    //        Car car1 = new Car("Mustang", "red");
 
-            Car car2 = Copy(car1); //Create a copy of car1 and store it in car2
+    //        Car car2 = Copy(car1); //Create a copy of car1 and store it in car2
 
-            //ChangeColor(car1, "Silver");
+    //        //ChangeColor(car1, "Silver");
 
-            Console.WriteLine(car2.color + " " + car2.model);
+    //        Console.WriteLine(car2.color + " " + car2.model);
 
-            Console.ReadKey();
-        }
-        //public static void ChangeColor(Car car, String color)
-        //{
-        //    car.color = color;
-        //}
+    //        Console.ReadKey();
+    //    }
+    //    //public static void ChangeColor(Car car, String color)
+    //    //{
+    //    //    car.color = color;
+    //    //}
 
-        public static Car Copy(Car car)
-        {
-            return new Car(car.model, car.color);
-        }
-    }
-    class Car
-    {
-        public String model;
-        public String color;
+    //    public static Car Copy(Car car)
+    //    {
+    //        return new Car(car.model, car.color);
+    //    }
+    //}
+    //class Car
+    //{
+    //    public String model;
+    //    public String color;
 
-        public Car(String model, String color)
-        {
-            this.model = model;
-            this.color = color;
-        }
-    }
+    //    public Car(String model, String color)
+    //    {
+    //        this.model = model;
+    //        this.color = color;
+    //    }
+    //}
+
+    //39. method overriding = provides a new version of a method inherited from a parent class
+    //                        inherted method must be: virtual, abstract or already overridden
+    //                        used with ToString(), polymorphism
+
+    //class Program 
+    //{ 
+    //    static void Main(String[] args)
+    //    {
+    //        Dog dog = new Dog();
+    //        Cat cat = new Cat();
+    //        dog.Speak();
+    //        cat.Speak();
+
+    //        Console.ReadKey();
+    //    }
+    //}
+    //class Animal
+    //{
+    //    public virtual void Speak() //Add virtual to enable it to be over ridden.
+    //    {
+    //        Console.WriteLine("The Animal goes *brrr*");
+    //    }
+    //}
+    //class Dog : Animal
+    //{
+    //    public override void Speak() //Need to have override, void (same type as orriginal), Speak() (Same name and signature)
+    //    {
+    //        Console.WriteLine("The Dog goes *wooff*");
+    //    }
+    //}
+    //class Cat : Animal
+    //{
+    //    public override void Speak()
+    //    {
+    //        Console.WriteLine("The Cat goes *meaww*");
+    //    }
+    //}
 }
