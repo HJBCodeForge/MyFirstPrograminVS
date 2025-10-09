@@ -943,34 +943,85 @@
 
     //40. ToString() method = converts an object to its string representation so that it is suitable for display
 
+    //class Program
+    //{
+    //    static void Main(string[] args) 
+    //    {
+    //        Car car = new Car("Ford", "Mustang", 2024, "Red");
+
+    //        Console.WriteLine(car.ToString());
+
+    //        Console.ReadKey();
+    //    }
+    //}
+    //class Car
+    //{
+    //    String make;
+    //    String model;
+    //    int year;
+    //    String color;
+
+    //    public Car(String make, String model, int year, String color)
+    //    {
+    //        this.make = make;
+    //        this.model = model;
+    //        this.year = year;
+    //        this.color = color;
+    //    }
+    //    public override string ToString()
+    //    {
+    //        return "This is a " + make + " " + model;
+    //    }
+    //}
+
+    //41. Polymorphism = Greek wordthat means to "have many forms"
+    //                   Objects can be identified by more than one type
+    //                   Ex. A Dog is also: Canine, Animal, Organism
+
     class Program
     {
-        static void Main(string[] args) 
+        static void Main(String[] args)
         {
-            Car car = new Car("Ford", "Mustang", 2024, "Red");
+            Car car = new Car();
+            Bicycle bicycle = new Bicycle();
+            Boat boat = new Boat();
 
-            Console.WriteLine(car.ToString());
+            Vehicle[] vehicles = { car, bicycle, boat }; //Array of Vehicle objects, can store any object that inherits from Vehicle
+
+            foreach (Vehicle vehicle in vehicles) 
+            {
+                vehicle.Go();
+            }
 
             Console.ReadKey();
         }
     }
-    class Car
+    class Vehicle
     {
-        String make;
-        String model;
-        int year;
-        String color;
+        public virtual void Go()
+        {
 
-        public Car(String make, String model, int year, String color)
-        {
-            this.make = make;
-            this.model = model;
-            this.year = year;
-            this.color = color;
         }
-        public override string ToString()
+    }
+    class Car: Vehicle
+    {
+        public override void Go()
         {
-            return "This is a " + make + " " + model;
+            Console.WriteLine("The Car is moving");
+        }
+    }
+    class Bicycle : Vehicle 
+    {
+        public override void Go()
+        {
+            Console.WriteLine("The Bicycle is moving");
+        }
+    }
+    class Boat : Vehicle
+    {
+        public override void Go()
+        {
+            Console.WriteLine("The Boat is moving");
         }
     }
 }
