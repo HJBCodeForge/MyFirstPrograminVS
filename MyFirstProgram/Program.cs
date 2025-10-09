@@ -978,50 +978,106 @@
     //                   Objects can be identified by more than one type
     //                   Ex. A Dog is also: Canine, Animal, Organism
 
-    class Program
+    //class Program
+    //{
+    //    static void Main(String[] args)
+    //    {
+    //        Car car = new Car();
+    //        Bicycle bicycle = new Bicycle();
+    //        Boat boat = new Boat();
+
+    //        Vehicle[] vehicles = { car, bicycle, boat }; //Array of Vehicle objects, can store any object that inherits from Vehicle
+
+    //        foreach (Vehicle vehicle in vehicles) 
+    //        {
+    //            vehicle.Go();
+    //        }
+
+    //        Console.ReadKey();
+    //    }
+    //}
+    //class Vehicle
+    //{
+    //    public virtual void Go()
+    //    {
+
+    //    }
+    //}
+    //class Car: Vehicle
+    //{
+    //    public override void Go()
+    //    {
+    //        Console.WriteLine("The Car is moving");
+    //    }
+    //}
+    //class Bicycle : Vehicle 
+    //{
+    //    public override void Go()
+    //    {
+    //        Console.WriteLine("The Bicycle is moving");
+    //    }
+    //}
+    //class Boat : Vehicle
+    //{
+    //    public override void Go()
+    //    {
+    //        Console.WriteLine("The Boat is moving");
+    //    }
+    //}
+
+    //42. interface = defines a "contract" that all classes inheriting from should follow
+    //                An interface "what a class should have"
+    //                An inheriting class defines "how it should do it"
+    //                Benefit = security + multiple inheritance + "plug-and-play"
+
+    class Public
     {
         static void Main(String[] args)
         {
-            Car car = new Car();
-            Bicycle bicycle = new Bicycle();
-            Boat boat = new Boat();
-
-            Vehicle[] vehicles = { car, bicycle, boat }; //Array of Vehicle objects, can store any object that inherits from Vehicle
-
-            foreach (Vehicle vehicle in vehicles) 
-            {
-                vehicle.Go();
-            }
+            Rabbit rabbit = new Rabbit();
+            Hawk hawk = new Hawk();
+            Fish fish = new Fish();
+            
+            rabbit.Flee();
+            hawk.Hunt();
+            fish.Hunt();
+            fish.Flee();
 
             Console.ReadKey();
         }
     }
-    class Vehicle
+    interface IPrey
     {
-        public virtual void Go()
+        void Flee();
+    }
+    interface IPredator
+    {
+        void Hunt();
+    }
+    class Rabbit : IPrey
+    {
+        public void Flee()
         {
+            Console.WriteLine("The Rabbit runs away!");
+        }
+    }
+    class Hawk :IPredator
+    {
+        public void Hunt()
+        {
+            Console.WriteLine("The Hawk is hunting!");
+        }
+    }
+    class Fish : IPrey, IPredator
+    {
+        public void Flee()
+        {
+            Console.WriteLine("The Fish swims away!");
+        }
+        public void Hunt()
+        {
+            Console.WriteLine("The Fish is looking for food!");
+        }
+    }
 
-        }
-    }
-    class Car: Vehicle
-    {
-        public override void Go()
-        {
-            Console.WriteLine("The Car is moving");
-        }
-    }
-    class Bicycle : Vehicle 
-    {
-        public override void Go()
-        {
-            Console.WriteLine("The Bicycle is moving");
-        }
-    }
-    class Boat : Vehicle
-    {
-        public override void Go()
-        {
-            Console.WriteLine("The Boat is moving");
-        }
-    }
 }
