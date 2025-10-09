@@ -940,4 +940,37 @@
     //        Console.WriteLine("The Cat goes *meaww*");
     //    }
     //}
+
+    //40. ToString() method = converts an object to its string representation so that it is suitable for display
+
+    class Program
+    {
+        static void Main(string[] args) 
+        {
+            Car car = new Car("Ford", "Mustang", 2024, "Red");
+
+            Console.WriteLine(car.ToString());
+
+            Console.ReadKey();
+        }
+    }
+    class Car
+    {
+        String make;
+        String model;
+        int year;
+        String color;
+
+        public Car(String make, String model, int year, String color)
+        {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.color = color;
+        }
+        public override string ToString()
+        {
+            return "This is a " + make + " " + model;
+        }
+    }
 }
