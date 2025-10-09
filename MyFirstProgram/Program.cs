@@ -1,4 +1,6 @@
-﻿namespace MyFirstProgram
+﻿using System;
+using System.Collections.Generic;
+namespace MyFirstProgram
 {
     //class Program
     //{
@@ -1030,53 +1032,93 @@
     //                An inheriting class defines "how it should do it"
     //                Benefit = security + multiple inheritance + "plug-and-play"
 
+    //class Public
+    //{
+    //    static void Main(String[] args)
+    //    {
+    //        Rabbit rabbit = new Rabbit();
+    //        Hawk hawk = new Hawk();
+    //        Fish fish = new Fish();
+
+    //        rabbit.Flee();
+    //        hawk.Hunt();
+    //        fish.Hunt();
+    //        fish.Flee();
+
+    //        Console.ReadKey();
+    //    }
+    //}
+    //interface IPrey
+    //{
+    //    void Flee();
+    //}
+    //interface IPredator
+    //{
+    //    void Hunt();
+    //}
+    //class Rabbit : IPrey
+    //{
+    //    public void Flee()
+    //    {
+    //        Console.WriteLine("The Rabbit runs away!");
+    //    }
+    //}
+    //class Hawk :IPredator
+    //{
+    //    public void Hunt()
+    //    {
+    //        Console.WriteLine("The Hawk is hunting!");
+    //    }
+    //}
+    //class Fish : IPrey, IPredator
+    //{
+    //    public void Flee()
+    //    {
+    //        Console.WriteLine("The Fish swims away!");
+    //    }
+    //    public void Hunt()
+    //    {
+    //        Console.WriteLine("The Fish is looking for food!");
+    //    }
+    //}
+
+    //43. List = data structure that represents a list of objects that can be accessed by index.
+    //           Similar to array, but can dynamically increase/decrease in size
+    //           using System.Collections.Generic;
+
     class Public
     {
         static void Main(String[] args)
         {
-            Rabbit rabbit = new Rabbit();
-            Hawk hawk = new Hawk();
-            Fish fish = new Fish();
-            
-            rabbit.Flee();
-            hawk.Hunt();
-            fish.Hunt();
-            fish.Flee();
+            List<string> food = new List<String>();
+
+            food.Add("fries");
+            food.Add("pizza");      //Not limit to items that can be added.
+            food.Add("hamburger");
+            food.Add("hotdog");
+            food.Add("fries");
+
+            Console.WriteLine("Access an item in the array: " + food[0]);
+
+            //Some usefull List methods
+
+            //food.Remove("fries");
+            //food.Insert(0,"sushi");
+            //Console.WriteLine(food.Count);
+            //Console.WriteLine(food.IndexOf("pizza"));
+            //Console.WriteLine(food.LastIndexOf("fries"));
+            //Console.WriteLine(food.Contains("pizza"));
+            //food.Sort();
+            //food.Reverse();
+            //food.Clear();
+            //String[] foodArray = food.ToArray();
+
+            foreach (String item in food)
+            {
+                Console.WriteLine(item);
+            }
 
             Console.ReadKey();
-        }
-    }
-    interface IPrey
-    {
-        void Flee();
-    }
-    interface IPredator
-    {
-        void Hunt();
-    }
-    class Rabbit : IPrey
-    {
-        public void Flee()
-        {
-            Console.WriteLine("The Rabbit runs away!");
-        }
-    }
-    class Hawk :IPredator
-    {
-        public void Hunt()
-        {
-            Console.WriteLine("The Hawk is hunting!");
-        }
-    }
-    class Fish : IPrey, IPredator
-    {
-        public void Flee()
-        {
-            Console.WriteLine("The Fish swims away!");
-        }
-        public void Hunt()
-        {
-            Console.WriteLine("The Fish is looking for food!");
         }
     }
 
