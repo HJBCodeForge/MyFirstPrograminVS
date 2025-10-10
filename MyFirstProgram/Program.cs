@@ -1172,40 +1172,145 @@ namespace MyFirstProgram
     // get accessor = used to asign anew value
     // value keyword = defines the value being assigned by the set (parameter)
 
-    class Program
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Car car = new Car(400);
+
+    //        car.Speed = 1000000;
+
+    //        Console.WriteLine(car.Speed);
+
+    //        Console.ReadKey();
+    //    }
+    //}
+    //class Car
+    //{
+    //    public int speed;
+
+    //    public Car(int speed)
+    //    {
+    //        Speed = speed;
+    //    }
+    //    public int Speed
+    //    {
+    //        get { return speed; } //read
+    //        set                   //writable
+    //        {
+    //            if (value > 500)
+    //            {
+    //                speed = 500;
+    //            } else
+    //            {
+    //                speed = value;
+    //            }
+    //        }
+    //    }
+    //}
+
+    //46. Auto-Impremented properties = shortcuts when no additional logic is required in the property
+    //                                  you do not have to define a fiel for a property,
+    //                                  you only have to write get; abnd/or set; inside the property
+
+    //class Program 
+    //{ 
+    //    static void Main(String[] args)
+    //    {
+    //        Car car = new Car("Mazda");
+
+    //        Console.WriteLine(car.Model);
+
+    //        Console.ReadKey();
+    //    }
+    //}
+    //class Car
+    //{
+    //    public String Model { get; set; }
+
+    //    public Car(String model)
+    //    {
+    //        this.Model = model;
+    //    }
+    //}
+
+    //47. enums = special "class" that represents a group of constants (unchangeable/read-only variables)
+    //            use enums when you have values that you know will not change, such as days, months, colors, etc.
+    //            To get integer vlaues from an item, you must explicitly cast it to an int
+    //            name = integer
+
+    //class Program
+    //{
+    //    static void Main(String[] args)
+    //    {
+    //        Console.WriteLine(Planets.Pluto + " is a planet"); //Accessing enum item name
+    //        Console.WriteLine(Planets.Saturn + " is planet #" + (int)Planets.Saturn);//Accessing enum item value, need to cast to int
+
+    //        String name = PlanetRaduis.Earth.ToString(); //Convert enum item to string
+    //        int radius = (int)PlanetRaduis.Earth; //Get enum item value, need to cast to int
+    //        Console.WriteLine("Platen: " + name + " has a radius of " + radius + " km");
+    //        Console.WriteLine("Radius: " + radius + " km");
+
+    //        double volume = Volume(PlanetRaduis.Earth);
+    //        Console.WriteLine("Volume: " + volume +"km^3");
+
+    //        Console.ReadKey();
+    //    }
+    //    public static double Volume(PlanetRaduis radius)
+    //    {
+    //        double volume = (4.0 / 3.0) * Math.PI * Math.Pow((int)radius, 3); //Volume of sphere formula
+    //        return volume;
+    //    }
+    //}
+    //enum Planets 
+    //{ 
+    //    Mercury = 1, //Assigning integer values to enum items, rest will continue incrementing
+    //    Venus, 
+    //    Earth, 
+    //    Mars, 
+    //    Jupiter, 
+    //    Saturn, 
+    //    Uranus, 
+    //    Neptune,
+    //    Pluto
+    //}
+    //enum PlanetRaduis
+    //    {
+    //    Mercury = 2439,
+    //    Venus = 6051,
+    //    Earth = 6371,
+    //    Mars = 3389,
+    //    Jupiter = 69911,
+    //    Saturn = 58232,
+    //    Uranus = 25362,
+    //    Neptune = 24622,
+    //    Pluto = 1188
+    //}
+
+    //48. generic = "not specific to a particular data type"
+    //              add <T> to: classes, methods, fields, etc.
+    //              allows for code reusability for different data types
+    class Progrma
     {
-        static void Main(string[] args)
+        static void Main(String[] args)
         {
-            Car car = new Car(400);
+            int[] intArray = { 1, 2, 3 };
+            double[] doubleArray = { 1.0, 2.0, 3.0 };
+            String[] stringArray = {"1", "2", "3" };
 
-            car.Speed = 1000000;
-
-            Console.WriteLine(car.Speed);
+            displayElements(intArray);
+            displayElements(doubleArray);
+            displayElements(stringArray);
 
             Console.ReadKey();
         }
-    }
-    class Car
-    {
-        public int speed;
-
-        public Car(int speed)
+        public static void displayElements<T>(T[] array) //Add <T> to make it generic
         {
-            Speed = speed;
-        }
-        public int Speed
-        {
-            get { return speed; } //read
-            set                   //writable
+            foreach (T item in array)
             {
-                if (value > 500)
-                {
-                    speed = 500;
-                } else
-                {
-                    speed = value;
-                }
+                Console.Write(item + " ");
             }
+            Console.WriteLine();
         }
     }
 
