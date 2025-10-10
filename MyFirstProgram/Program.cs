@@ -1290,28 +1290,70 @@ namespace MyFirstProgram
     //48. generic = "not specific to a particular data type"
     //              add <T> to: classes, methods, fields, etc.
     //              allows for code reusability for different data types
-    class Progrma
+    //class Progrma
+    //{
+    //    static void Main(String[] args)
+    //    {
+    //        int[] intArray = { 1, 2, 3 };
+    //        double[] doubleArray = { 1.0, 2.0, 3.0 };
+    //        String[] stringArray = {"1", "2", "3" };
+
+    //        displayElements(intArray);
+    //        displayElements(doubleArray);
+    //        displayElements(stringArray);
+
+    //        Console.ReadKey();
+    //    }
+    //    public static void displayElements<T>(T[] array) //Add <T> to make it generic
+    //    {
+    //        foreach (T item in array)
+    //        {
+    //            Console.Write(item + " ");
+    //        }
+    //        Console.WriteLine();
+    //    }
+    //}
+
+    //49. Multi Threading = an execution path of a program
+    //                      Wecan use multiple threads to perform,
+    //                      different tasks of our program at the same time.
+    //                      Current thread running is "main" thread
+    //                      using System.Threading;
+
+    class Program
     {
         static void Main(String[] args)
         {
-            int[] intArray = { 1, 2, 3 };
-            double[] doubleArray = { 1.0, 2.0, 3.0 };
-            String[] stringArray = {"1", "2", "3" };
+            Thread mainThread = Thread.CurrentThread;
+            mainThread.Name = "Main Thread";
 
-            displayElements(intArray);
-            displayElements(doubleArray);
-            displayElements(stringArray);
+            //Console.WriteLine(mainThread.Name);
 
+            Thread thread1 = new Thread(CountDown); //Create a new thread, pass in a method
+            Thread thread2 = new Thread(() => CountUp("Time #2")); //Using lambda expression to pass in a method with parameters
+            thread1.Start();
+            thread2.Start();
+
+            Console.WriteLine(mainThread.Name + " has completed!");
             Console.ReadKey();
         }
-        public static void displayElements<T>(T[] array) //Add <T> to make it generic
+        public static void CountDown()
         {
-            foreach (T item in array)
+            for (int i = 10; i >= 0; i--)
             {
-                Console.Write(item + " ");
+                Console.WriteLine("Time #1 : " + i + " seconds");
+                Thread.Sleep(1000);
             }
-            Console.WriteLine();
+            Console.WriteLine("Time #1 is complete!");
         }
-    }
-
+        public static void CountUp(String name)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.WriteLine("Time #2 : " + i + " seconds");
+                Thread.Sleep(1000);
+            }
+            Console.WriteLine("Time #2 is complete!");
+        }
+    }  
 }
